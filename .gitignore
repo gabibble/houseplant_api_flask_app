@@ -1,0 +1,5 @@
+plant_env
+app.db
+__pycache__
+migrations
+.env

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="Description" content="Enter your description here" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <!-- <link rel="stylesheet" href="assets/css/style.css" /> -->
+    <link rel="stylesheet" href="../static/css/main.css" />
+    <script
+      src="https://kit.fontawesome.com/606d8453fd.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>HousePlant</title>
+  </head>
+  <body>
+    <nav class="ct-nav">
+      <div>
+        <ul id="horizontal-list">
+          <a href="#"
+            ><li><i class="fa-solid fa-seedling logo-icon"> </i></li
+          ></a>
+          <a href="{{ url_for('site.home') }}"><li>Home</li></a>
+          <a href="{{ url_for('site.profile') }}"><li>Profile</li></a>
+          <a
+            href="https://support.worldwildlife.org/site/SPageServer?pagename=main_monthly&s_src=AWE2209OQ18299A01179RX&s_subsrc=topnav&_ga=2.127697165.100489549.1662509786-1128117036.1662509786"
+            ><li>Donate</li></a
+          >
+          <a href="{{ url_for('auth.signin') }}"><li>Sign in</li></a>
+          <a href="{{ url_for('auth.signup') }}"><li>Sign up</li></a>
+        </ul>
+      </div>
+    </nav>
+    {% block content %} {% endblock content %}
+    <div class="container footerj">
+      <footer class="row" id="footer">
+        <div class="col-lg-3 mt-5">
+          <i class="fa-solid fa-seedling footer-icon"> </i>
+        </div>
+        <div class="col-lg-3">
+          <div class="footer-text-flex">
+            <h4>About</h4>
+            <p>Why plants?</p>
+            <p>The Plants API project</p>
+            <p>Donate</p>
+            <p>Spread the word</p>
+            <p>Our process</p>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="footer-text-flex">
+            <h4>Get in touch</h4>
+            <p>Twitter</p>
+            <p>Schmitter</p>
+            <p>Instagram</p>
+            <p>Pandagram</p>
+            <p>Facebook</p>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="footer-text-flex">
+            <h4>Resources</h4>
+            <p>Find a local nursery</p>
+            <p>Ask an expert</p>
+            <p>Help</p>
+            <p>Careers</p>
+            <p>Legal</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

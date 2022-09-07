@@ -1,0 +1,64 @@
+{% extends 'base.html' %} {% block content %}
+<div class="container">
+  <header class="row headerj">
+    <div class="col-sm-6" id="header-text">
+      <h1>House plant API</h1>
+      <h5>Your online plant collection</h5>
+      <div>
+        <button class="btnj btn btn-primary">Create your collection</button>
+        <button class="btnj btn btn-primary">Join our community</button>
+      </div>
+    </div>
+    <div class="col-sm-6 header-img-container">
+      <img
+        class="header-image img-fluid"
+        src="../static/images/woman2.svg"
+        alt="Hero Header Image"
+      />
+    </div>
+  </header>
+  <section class="row">
+    <div class="col-12" id="middle-text">
+      <h2>Display your collection here</h2>
+      <p>You can harness the power of an API to expand your collection!</p>
+    </div>
+  </section>
+  <section class="row" id="features-section">
+    <div class="col-md-4 feature">
+      <i class="fa-solid fa-database feature-icon"></i>
+      <h4>Access</h4>
+      <p>
+        Learn about the plants in your collection from a crowdsourced database
+      </p>
+    </div>
+    <div class="col-md-4 feature">
+      <i class="fa-solid fa-share-nodes feature-icon"></i>
+      <h4>Share</h4>
+      <p>Share your collection with others</p>
+    </div>
+    <div class="col-md-4 feature">
+      <i class="fa-solid fa-hand-holding-droplet feature-icon"></i>
+      <h4>Grow</h4>
+      <p>Learn how to best take care of your plants</p>
+    </div>
+  </section>
+  <section class="row">
+    <div class="col-md-6">
+      <img
+        class="img-fluid"
+        src="../../static/images/plant.svg"
+        alt="Drone Image"
+      />
+    </div>
+    <div class="col-12 col-md-6">
+      <h4>Talk with like minded plant enthusiests!</h4>
+      <p>Talk with others around the world and collab on projects!</p>
+      <div class="">
+        <button class="btnj btn btn-primary">View on github</button>
+        <button class="btnj btn btn-primary">Join our slack</button>
+      </div>
+    </div>
+  </section>
+  
+</div>
+{% endblock content%}
