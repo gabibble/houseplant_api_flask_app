@@ -1,7 +1,7 @@
 <form method="POST">
     {{ form.hidden_tag() }}
     <div class="form-group mt4">
-        { % if signup % }
+        {% if request.endpoint == "auth.signup" %}
          <fieldset id="first_name-field">
             {{ form.first_name.label }}
             {{ form.first_name(class = "form-control mb-3")}}
@@ -10,7 +10,7 @@
             {{ form.last_name.label }}
             {{ form.last_name(class = "form-control mb-3")}}
         </fieldset>
-        { % endif % }
+        {% endif %}
         <fieldset id="email-field">
             {{ form.email.label }}
             {{ form.email(class = "form-control mb-3", placeholder="enter your email")}}
