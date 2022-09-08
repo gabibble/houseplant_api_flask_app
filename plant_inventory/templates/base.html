@@ -31,13 +31,17 @@
       <div>
         <ul id="horizontal-list">
           <a href="{{ url_for('site.home') }}"><li>Home</li></a>
-          <a href="{{ url_for('site.profile') }}"><li>Profile</li></a>
           <a
             href="https://support.worldwildlife.org/site/SPageServer?pagename=main_monthly&s_src=AWE2209OQ18299A01179RX&s_subsrc=topnav&_ga=2.127697165.100489549.1662509786-1128117036.1662509786"
             ><li>Donate</li></a
           >
+          {% if current_user.is_authenticated %}
+          <a href="{{ url_for('site.profile') }}"><li>Profile</li></a>
+          <a href="{{ url_for('auth.logout') }}"><li>Log out</li></a>
+          {% else %}
           <a href="{{ url_for('auth.signin') }}"><li>Sign in</li></a>
           <a href="{{ url_for('auth.signup') }}"><li>Sign up</li></a>
+          {% endif %}
         </ul>
       </div>
     </nav>

@@ -1,12 +1,12 @@
 {% extends 'base.html' %} {% block content %}
 <header class="hero-section">
-  <h3 class="header-text">Welcome to House Plants API, test@gmail.com!</h3>
+  <h3 class="header-text">Welcome to House Plants API, {{ current_user.email }}!</h3>
 </header>
 <div class="container">
   <ul class="list-group">
-    <li class="list-group-item">Email: test@gail.com</li>
+    <li class="list-group-item">Email: {{ current_user.email }}</li>
     <li class="list-group-item">
-      Token: when we have one
+      Token: {{ current_user.token }}
       <!-- TODO add user email and token with Jinja -->
     </li>
   </ul>

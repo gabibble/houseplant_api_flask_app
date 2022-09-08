@@ -1,11 +1,37 @@
 {% extends 'base.html' %} {% block content %}
 
-<!-- #TODO add flash messages  -->
-
+{% with messages = get_flashed_messages(with_categories = true) %} {% if
+messages %} {% for cat, msg in messages %} {% if cat == 'user-created' %}
+<div class="container">
+  {{ msg }}
+  <button
+    type="button"
+    class="close"
+    data-dismiss="alert"
+    ,
+    onclick="this.parentElement.style.display='none'"
+  >
+    &times;
+  </button>
+</div>
+{% elif cat == 'auth-failed' %}
+<div class="container">
+  {{ msg }}
+  <button
+    type="button"
+    class="close"
+    data-dismiss="alert"
+    ,
+    onclick="this.parentElement.style.display='none'"
+  >
+    &times;
+  </button>
+</div>
+{% endif %} {% endfor %} {% endif %} {% endwith %}
 
 <div class="container">
   <h1>Log in here</h1>
-  <h3>sign into your account</h3>
+  <h3>Sign into your account</h3>
   {% include 'forms.html' %}
 </div>
 
