@@ -1,0 +1,24 @@
+<form method="POST">
+    {{ form.hidden_tag() }}
+    <div class="form-group mt4">
+        { % if signup % }
+         <fieldset id="first_name-field">
+            {{ form.first_name.label }}
+            {{ form.first_name(class = "form-control mb-3")}}
+        </fieldset>
+         <fieldset id="last_name-field">
+            {{ form.last_name.label }}
+            {{ form.last_name(class = "form-control mb-3")}}
+        </fieldset>
+        { % endif % }
+        <fieldset id="email-field">
+            {{ form.email.label }}
+            {{ form.email(class = "form-control mb-3", placeholder="enter your email")}}
+        </fieldset>
+        <fieldset id="pass-field">
+            {{ form.password.label }}
+            {{ form.password(class = "form-control mb-3", placeholder="enter your password")}}
+        </fieldset>
+        {{ form.submit_button(class="btn btn-primary btn-block mb-3") }}
+    </div>
+</form>

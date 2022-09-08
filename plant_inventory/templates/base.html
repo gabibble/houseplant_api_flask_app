@@ -22,12 +22,14 @@
     <title>HousePlant</title>
   </head>
   <body>
-    <nav class="ct-nav">
+    <nav class="ct-nav container mt-4">
+      <div>
+        <a href="{{ url_for('site.home') }}">
+        <i class="fa-solid fa-seedling logo-icon"> </i>
+        </a>
+      </div>
       <div>
         <ul id="horizontal-list">
-          <a href="#"
-            ><li><i class="fa-solid fa-seedling logo-icon"> </i></li
-          ></a>
           <a href="{{ url_for('site.home') }}"><li>Home</li></a>
           <a href="{{ url_for('site.profile') }}"><li>Profile</li></a>
           <a

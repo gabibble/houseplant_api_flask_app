@@ -22,26 +22,22 @@ h1 {
 .header-image {
   margin: 40px auto;
 }
-ct-nav {
-  display: flex;
-  justify-content: space-between;
-}
 
 /* Target Main Logo Image */
 
 i.logo-icon {
-  font-size: 36px;
+  font-size: 44px;
   margin: 20px auto;
   text-align: center;
   color: #49bb8f;
 }
 .ct-nav {
-  max-width: 1400px;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
 }
 
 ul#horizontal-list {
-  min-width: 696px;
   list-style: none;
   padding-top: 20px;
 }
@@ -83,18 +79,24 @@ ul#horizontal-list a:nth-last-child(1) {
 
 .feature {
   margin: 0 auto;
+   display: flex; 
+   flex-direction: column;
+  justify-items: center;
 }
 #features-section {
-  margin: 30px auto;
+  margin: 30px auto 50px;
   max-width: 900px;
+  text-align: center;
+ 
 }
 
-.feature-icon {
-  font-size: 90px;
-  margin: 20px auto;
+div.feature-icon {
+  font-size: 120px;
+  margin: 20px auto 10px;
   text-align: center;
   color: #49bb8f;
   padding: auto;
+  display: block;
 }
 /* End of Features Section */
 
